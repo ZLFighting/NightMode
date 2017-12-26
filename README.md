@@ -295,4 +295,14 @@ label.text = @"测试看看字色及背景色";
 
 ![夜间模式.gif](https://github.com/ZLFighting/NightMode/blob/master/NightMode/夜间模式.gif)
 
+
+**PS:当不是同一图标切换图标的渲染取消效果**
+```
+// 申明：这张选中图片按照原始的样子显示出来,取消渲染（而默认选中后渲染的render蓝色）
+UIImage *barBtnImage = [ThemeManage shareThemeManage].isNight ? [[UIImage imageNamed:@"night"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal] : [[UIImage imageNamed:@"day"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+[barButton setImage:barBtnImage];
+```
+![换肤_取消渲染.gif](https://github.com/ZLFighting/NightMode/blob/master/NightMode/换肤_取消渲染.gif)
+
+
 您的支持是作为程序媛的我最大的动力, 如果觉得对你有帮助请送个Star吧,谢谢啦
